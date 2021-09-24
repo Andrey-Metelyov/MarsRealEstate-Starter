@@ -39,7 +39,8 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
     }
 }
 
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarsProperty>) {
+@BindingAdapter("listData")
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarsProperty>?) {
     val adapter = recyclerView.adapter as PhotoGridAdapter
     adapter.submitList(data)
 }
